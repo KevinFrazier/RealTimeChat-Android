@@ -2,6 +2,9 @@ package com.kevinfrazier.realtimechat;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.util.LayoutDirection;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -104,16 +107,34 @@ public class ChatListAdapter extends BaseAdapter{
         final InstantMessage message = getItem(position);
         final ViewHolder holder = (ViewHolder) convertView.getTag();
 
+        boolean isAuthor = message.getAuthor().equals(mDisplayName);
+
         //set values of TextView
         String author = message.getAuthor();
         holder.authorName.setText(author);
-
         String msg = message.getMessage();
         holder.body.setText(msg);
 
+        setAppearance(isAuthor, holder);
         return convertView;
     }
 
+    public void setAppearance(boolean isAuthor, ViewHolder holder){
+
+        if(isAuthor){
+            holder.params.gravity = Gravity.END;
+            holder.authorName.setTextColor(Color.GREEN);
+            holder.body.setBackgroundResource(R.drawable.bubble2);
+        }else{
+            holder.params.gravity = Gravity.START;
+            holder.authorName.setTextColor(Color.BLUE);
+            holder.body.setBackgroundResource(R.drawable.bubble1);
+
+        }
+
+        holder.authorName.setLayoutParams(holder.params);
+        holder.body.setLayoutParams(holder.params);
+    }
     public void cleanup(){
         mDatabaseReference.removeEventListener(mListener);
     }
