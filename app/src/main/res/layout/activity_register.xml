@@ -9,12 +9,13 @@
               android:paddingRight="@dimen/activity_horizontal_margin"
               android:paddingTop="@dimen/activity_vertical_margin"
               android:background="@drawable/background_login_min"
-              tools:context="com.londonappbrewery.flashchatnewfirebase.RegisterActivity"
+              tools:context="com.kevinfrazier.realtimechat.RegisterActivity"
               android:gravity="top">
 
 
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
@@ -34,9 +35,10 @@
                 android:textIsSelectable="false"
                 android:textStyle="bold"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
@@ -56,15 +58,15 @@
                 android:textIsSelectable="false"
                 android:textStyle="bold"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
             >
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_password"
                 android:textSize="25sp"
                 android:textColor="@color/white"
@@ -77,15 +79,15 @@
                 android:maxLines="1"
                 android:textStyle="bold"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColorHint="@color/white"
             >
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/register_confirm_password"
                 android:textColor="@color/white"
                 android:textSize="25sp"
@@ -100,7 +102,7 @@
                 android:maxLines="1"
                 android:textStyle="bold"/>
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/register_sign_up_button"

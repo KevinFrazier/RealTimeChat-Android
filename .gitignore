@@ -99,3 +99,4 @@ lint/tmp/
 gen-external-apklibs
 output.json
 
+app/google-services.json
